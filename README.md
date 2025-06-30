@@ -1,70 +1,248 @@
-# Getting Started with Create React App
+# Harvest Hope Tigray Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based website for Harvest Hope Tigray, an organization focused on empowering communities through sustainable agriculture and development initiatives.
 
-## Available Scripts
+## 🌟 Features
 
-In the project directory, you can run:
+- **Modern React Application** - Built with React 19 and modern JavaScript
+- **Responsive Design** - Mobile-first approach with Tailwind CSS
+- **Client-Side Routing** - Smooth navigation with React Router
+- **GitHub Pages Deployment** - Automated CI/CD pipeline
+- **SPA Fallback** - Proper routing support for GitHub Pages
 
-### `npm start`
+## 🚀 Quick Start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js 20 or higher
+- npm or yarn package manager
+- Git
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/HarvetHope/website.git
+   cd website
+   ```
 
-### `npm run build`
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Start development server**
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Open your browser**
+   Navigate to `http://localhost:3000`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Project Structure
 
-### `npm run eject`
+```
+harvesthopetigray/
+├── .github/workflows/     # GitHub Actions CI/CD
+├── public/                # Static assets
+│   ├── images/           # Image assets
+│   │   ├── index.html        # Main HTML template
+│   │   └── 404.html          # SPA fallback
+├── src/                  # Source code
+│   ├── components/       # Reusable React components
+│   │   ├── Header.js
+│   │   ├── Footer.js
+│   │   ├── HeroSection.js
+│   │   ├── ProjectsSection.js
+│   │   └── EmpowerFarmers.js
+│   ├── pages/           # Page components
+│   │   ├── HomePage.js
+│   │   ├── AboutUsPage.js
+│   │   ├── ProjectsPage.js
+│   │   ├── ContactUsPage.js
+│   │   └── DonatePage.js
+│   ├── App.js           # Main application component
+│   ├── App.css          # Application styles
+│   └── index.js         # Application entry point
+├── package.json         # Dependencies and scripts
+├── tailwind.config.js   # Tailwind CSS configuration
+└── README.md           # This file
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Development Workflow
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Branch Strategy
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **`master`** - Main development branch (contains source code only)
+- **`gh-pages`** - Deployment branch (contains built files only, managed by GitHub Actions)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Development Process
 
-## Learn More
+1. **Create a feature branch** (optional for small changes)
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Make your changes**
+   - Edit source files in `src/`
+   - Add new components as needed
+   - Update styles using Tailwind CSS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Test locally**
+   ```bash
+   npm start          # Development server
+   npm run build      # Production build
+   npm test           # Run tests
+   ```
 
-### Code Splitting
+4. **Commit your changes**
+   ```bash
+   git add .
+   git commit -m "Description of your changes"
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. **Push to master**
+   ```bash
+   git push origin master
+   ```
 
-### Analyzing the Bundle Size
+6. **Automatic deployment**
+   - GitHub Actions automatically builds and deploys
+   - Site updates within 2-3 minutes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚀 Deployment
 
-### Making a Progressive Web App
+### Automated Deployment (Recommended)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The project uses GitHub Actions for automated deployment:
 
-### Advanced Configuration
+1. **Push to master branch**
+2. **GitHub Actions workflow triggers automatically**
+3. **Build process runs in cloud**
+4. **Site deploys to GitHub Pages**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Manual Deployment (Legacy)
 
-### Deployment
+If needed, you can deploy manually:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm run deploy
+```
 
-### `npm run build` fails to minify
+This will:
+- Build the application
+- Push to gh-pages branch
+- Update the live site
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env.local` file for local development:
+
+```env
+REACT_APP_API_URL=your_api_url_here
+```
+
+### Tailwind CSS
+
+The project uses Tailwind CSS for styling. Configuration is in `tailwind.config.js`.
+
+### GitHub Pages
+
+- **Source**: gh-pages branch
+- **URL**: https://harvesthopetigray.org
+- **Custom domain**: Configured via CNAME file
+
+## 📦 Available Scripts
+
+```bash
+npm start          # Start development server
+npm run build      # Build for production
+npm test           # Run tests
+npm run eject      # Eject from Create React App
+npm run deploy     # Deploy to GitHub Pages (manual)
+```
+
+## 🎨 Styling Guidelines
+
+### Tailwind CSS Classes
+
+Use Tailwind CSS utility classes for styling:
+
+```jsx
+// Example component styling
+<div className="container mx-auto px-6 py-8 bg-gray-50">
+  <h1 className="text-3xl font-bold text-gray-900 mb-4">
+    Welcome to Harvest Hope Tigray
+  </h1>
+</div>
+```
+
+### Component Structure
+
+Follow this pattern for new components:
+
+```jsx
+import React from 'react';
+
+const ComponentName = () => {
+  return (
+    <div className="component-container">
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default ComponentName;
+```
+
+## 🔍 Troubleshooting
+
+### Common Issues
+
+1. **Dependency conflicts**
+   - Run `npm install --legacy-peer-deps` locally
+   - GitHub Actions uses this flag automatically
+
+2. **Build fails**
+   - Check for syntax errors
+   - Ensure all imports are correct
+   - Verify Tailwind CSS classes
+
+3. **Deployment issues**
+   - Check GitHub Actions logs
+   - Verify gh-pages branch exists
+   - Ensure GitHub Pages is enabled
+
+### Development Tips
+
+- Use React Developer Tools for debugging
+- Check browser console for errors
+- Use Tailwind CSS IntelliSense extension
+- Test on different screen sizes
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is private and proprietary to Harvest Hope Tigray.
+
+## 🌐 Live Site
+
+Visit the live site: https://harvesthopetigray.org
+
+## 📞 Support
+
+For technical support or questions about the website, please contact the development team.
+
+---
+
+**Last updated**: June 2025
+**Version**: 1.0.0
