@@ -1,0 +1,46 @@
+name: Build & Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ master ]          # or master
+  workflow_dispatch:            # ← manual "Run workflow" button
+
+permissions:
+  contents: write               # so the action can push to gh-pages
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout source
+      uses: actions/checkout@v4
+
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: npm
+
+    - name: Install deps
+      run: npm ci                # or pnpm install / yarn install
+
+    - name: Build for production
+      run: |
+        npm run build            # generates build/
+        cp build/index.html build/404.html   # SPA fallback
+
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ./build
+        # keeps commit history tiny
+        force_orphan: true 
