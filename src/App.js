@@ -1,6 +1,6 @@
 // App.js
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
@@ -11,8 +11,7 @@ import DonatePage from "./pages/DonatePage";
 
 function App() {
   return (
-    <Router basename="/website">
-      <div className="App">
+    <Router>
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -22,7 +21,6 @@ function App() {
           <Route path="/donate" element={<DonatePage />} />
         </Routes>
         <Footer />
-      </div>
     </Router>
   );
 }
