@@ -73,7 +73,7 @@ const ContactUsPage = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-4">Office Location</h3>
                   <p className="text-gray-600">
-                  P.O.BOX 5, P.O.BOX 5  
+                  6445 Richardson Farm Lane  
                     <br /> Clarksville, MD 21029
                     <br /> USA
                   </p>
