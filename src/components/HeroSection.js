@@ -12,12 +12,15 @@ const HeroSection = () => {
             <p className="text-xl text-gray-600 mb-8">Join us in empowering communities through sustainable agriculture and development initiatives.</p>
             <div className="flex space-x-4">
               <Link to="/donate" className="bg-green-700 text-white px-8 py-3 rounded-lg hover:bg-green-800 transition cursor-pointer">Donate Now</Link>
-              <span className="border border-green-700 text-green-700 px-8 py-3 rounded-lg hover:bg-green-50 transition cursor-pointer" onClick={() => window.location.href = '/projects'}>Learn More</span>
-              
+              <Link to="/projects" className="border border-green-700 text-green-700 px-8 py-3 rounded-lg hover:bg-green-50 transition cursor-pointer">Learn More</Link>
             </div>
           </div>
           <div className="md:w-1/2">
-            <img className="rounded-xl shadow-2xl" src="/images/Sawseed.jpg" alt="Ethiopian farmers working in green agricultural fields" />
+            <img 
+              className="rounded-xl shadow-2xl" 
+              src={`${process.env.PUBLIC_URL}/images/Sawseed.jpg`} 
+              alt="Ethiopian farmers working in green agricultural fields" 
+            />
           </div>
         </div>
       </div>

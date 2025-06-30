@@ -11,7 +11,7 @@ import DonatePage from "./pages/DonatePage";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/website">
       <div className="App">
         <Header />
         <Routes>

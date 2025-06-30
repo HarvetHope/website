@@ -10,22 +10,22 @@ const ProjectsSection = () => {
           <ProjectCard
             title="Equip"
             description="Provide essential farming tools and equipment (plows, Seeds, fertilizer, etc.)"
-            image="/images/Equip.jpg"
+            image={`${process.env.PUBLIC_URL}/images/equip.jpg`}
           />
           <ProjectCard
             title="Revitalize"
             description="SRebuild vital infrastructure, like irrigation systems and grain mills."
-            image="/images/Revitalize.jpg"
+            image={`${process.env.PUBLIC_URL}/images/revitalize.jpg`}
           />
           <ProjectCard
             title="Innovate"
             description="Introduce modern agricultural techniques to increase yields and resilience."
-            image="/images/Innovate.jpg"
+            image={`${process.env.PUBLIC_URL}/images/Innovate.jpg`}
           />
-             <ProjectCard
+          <ProjectCard
             title="Harmonize"
             description="Collaborate with local communities to priorize their immediate and long-term needs."
-            image="/images/Harmonize.jpg"
+            image={`${process.env.PUBLIC_URL}/images/Harmonize.jpg`}
           />
         </div>
       </div>

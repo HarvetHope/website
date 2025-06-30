@@ -2,15 +2,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer id="footer" className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4">
             <img
-              src="/images/dark.png"
+              src={`${process.env.PUBLIC_URL}/images/dark.png`}
               alt="Empowering the Farmers Logo"
               className="h-12"
             />
@@ -22,10 +23,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><span className="text-gray-400 hover:text-white cursor-pointer" onClick={() => window.location.href='/about-us'}>About Us</span></li>
-              <li><span className="text-gray-400 hover:text-white cursor-pointer" onClick={() => window.location.href='/projects'}>Projects</span></li>
-              <li><span className="text-gray-400 hover:text-white cursor-pointer" onClick={() => window.location.href='/donate'}>Donate</span></li>
-              <li><span className="text-gray-400 hover:text-white cursor-pointer" onClick={() => window.location.href='/contact-us'}>Contact</span></li>
+              <li><Link to="/about-us" className="text-gray-400 hover:text-white">About Us</Link></li>
+              <li><Link to="/projects" className="text-gray-400 hover:text-white">Projects</Link></li>
+              <li><Link to="/donate" className="text-gray-400 hover:text-white">Donate</Link></li>
+              <li><Link to="/contact-us" className="text-gray-400 hover:text-white">Contact</Link></li>
             </ul>
           </div>
           <div>

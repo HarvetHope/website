@@ -99,7 +99,7 @@ const AboutUsPage = () => {
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-12">
-                    <img src="/images/AlmazDesta.jpg" alt="Dr. Almaz Desta Zewde" class="w-48 h-48 rounded-full mx-auto mb-6 shadow-lg" />
+                    <img src={`${process.env.PUBLIC_URL}/images/AlmazDesta.jpg`} alt="Dr. Almaz Desta Zewde" class="w-48 h-48 rounded-full mx-auto mb-6 shadow-lg" />
                     <h1 class="text-4xl font-bold text-gray-800 mb-4">Dr. Almaz Desta Zewde</h1>
                     <p class="text-xl text-gray-600">Founder & President</p>
                 </div>

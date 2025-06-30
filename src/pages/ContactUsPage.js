@@ -86,7 +86,7 @@ const ContactUsPage = () => {
                   </p>
                   <p className="text-gray-600 flex items-center">
                     <i className="fa-solid fa-phone mr-3"></i>
-                    +251 123 456 789
+                    +202-270-5017
                   </p>
                 </div>
               </div>

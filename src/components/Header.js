@@ -17,7 +17,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <img
-              src="/images/Empowering the farmers logo 3-2024.jpg"
+              src={`${process.env.PUBLIC_URL}/images/Empowering the farmers logo 3-2024.jpg`}
               alt="Empowering the Farmers Logo"
               className="h-12 w-12"
             />
