@@ -1,5 +1,6 @@
 // components/ProjectsSection.js
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProjectsSection = () => {
   return (
@@ -14,7 +15,7 @@ const ProjectsSection = () => {
           />
           <ProjectCard
             title="Revitalize"
-            description="SRebuild vital infrastructure, like irrigation systems and grain mills."
+            description="Rebuild vital infrastructure, like irrigation systems and grain mills."
             image={`${process.env.PUBLIC_URL}/images/revitalize.jpg`}
           />
           <ProjectCard
@@ -40,7 +41,12 @@ const ProjectCard = ({ title, description, image }) => {
       <div className="p-6">
         <h3 className="font-bold text-xl mb-2">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
-        <span className="text-green-700 hover:text-green-800 font-medium cursor-pointer">Learn more <i className="fa-solid fa-arrow-right ml-2"></i></span>
+        <Link 
+          to="/projects"
+          className="text-green-700 hover:text-green-800 font-medium cursor-pointer transition-colors duration-200 inline-block"
+        >
+          Learn more <i className="fa-solid fa-arrow-right ml-2"></i>
+        </Link>
       </div>
     </div>
   );
