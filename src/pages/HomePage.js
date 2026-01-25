@@ -6,7 +6,7 @@ import EmpowerFarmers from "../components/EmpowerFarmers";
 
 const HomePage = () => {
   return (
-    <main>
+    <main id="main" className="pt-20">
       {/* Other sections of the homepage can go here */}
       <HeroSection />
       <ProjectsSection />
