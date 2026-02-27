@@ -41,29 +41,36 @@ const MediaPage = () => {
       {/* Video Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center">
                 <FontAwesomeIcon icon={faPlay} className="text-green-700 mr-3" />
-                Village Assessment Video
+                Village Assessment Videos
               </h2>
               <p className="text-gray-600 text-lg mb-6">
-                Watch our field assessment where we visit villages throughout Gulomekeda, speaking directly with farmers about the agricultural challenges they face and their needs for sustainable development.
+                Watch our field assessments where we visit villages throughout Gulomekeda, speaking directly with farmers about the agricultural challenges they face and their needs for sustainable development.
               </p>
             </div>
 
-            {/* Facebook Video Embed */}
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Falmaz.zewde.33%2Fvideos%2F711137028326169%2F&show_text=false&width=560&t=0"
-                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-xl"
-                style={{ border: 'none', overflow: 'hidden' }}
-                scrolling="no"
-                frameBorder="0"
-                allowFullScreen={true}
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                title="Village Assessment Video"
-              ></iframe>
+            {/* Video Grid */}
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                "WhatsApp Video 2026-02-25 at 1.33.04 PM.mp4",
+                "WhatsApp Video 2026-02-25 at 1.33.13 PM.mp4",
+                "WhatsApp Video 2026-02-25 at 1.33.20 PM.mp4",
+                "WhatsApp Video 2026-02-25 at 1.33.31 PM.mp4",
+              ].map((filename, index) => (
+                <div key={index} className="rounded-lg overflow-hidden shadow-xl bg-black">
+                  <video
+                    controls
+                    className="w-full"
+                    preload="metadata"
+                  >
+                    <source src={`${process.env.PUBLIC_URL}/videos/${encodeURIComponent(filename)}`} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              ))}
             </div>
 
             {/* Video Description */}
@@ -82,7 +89,7 @@ const MediaPage = () => {
                   <div className="text-gray-600">Farmer Interviews</div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
-                  <div className="text-2xl font-bold text-green-700 mb-1">March 2024</div>
+                  <div className="text-2xl font-bold text-green-700 mb-1">Feb 2026</div>
                   <div className="text-gray-600">Assessment Date</div>
                 </div>
               </div>
